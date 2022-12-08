@@ -11,6 +11,8 @@ export class SellerService {
   url:string="http://localhost:3000/seller";
 
   PostMessage(data:Model){
-    return this.http.post(this.url,data);
+    this.http.post(this.url,data,{observe:'response'}).subscribe(data =>{
+      console.log(data);
+    });
   }
 }

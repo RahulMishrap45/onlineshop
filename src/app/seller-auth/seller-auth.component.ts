@@ -11,9 +11,7 @@ export class SellerAuthComponent {
 
   constructor(private sellerauth:SellerService){}
   signup(data:Model){
-    this.sellerauth.PostMessage(data).subscribe(data => {
-      console.log(data);
-    })
+    this.sellerauth.PostMessage(data);
   }
 
 }
