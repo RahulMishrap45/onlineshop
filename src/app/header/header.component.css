@@ -29,8 +29,9 @@ ul li a:hover{
 }
 .menu h5{
  padding: 6px;
- color:rgb(0, 123, 255);
+ color:rgb(11, 94, 215);
 }
 .menu h5:hover{
-    color:rgb(229, 86, 46)
+    color:rgb(229, 86, 46);
+    cursor: pointer;
 }

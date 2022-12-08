@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Model } from '../shared/model.model';
 import { SellerService } from '../shared/seller.service';
 
 @Component({
@@ -9,7 +10,7 @@ import { SellerService } from '../shared/seller.service';
 export class SellerAuthComponent {
 
   constructor(private sellerauth:SellerService){}
-  signup(data:object){
+  signup(data:Model){
     this.sellerauth.PostMessage(data).subscribe(data => {
       console.log(data);
     })
