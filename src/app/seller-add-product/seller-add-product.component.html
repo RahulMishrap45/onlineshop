@@ -2,6 +2,11 @@
     <div class="row justify-content-center">
         <div class="col-md-4">
             <div class="text-center"> <span style="font-size: 40px;color: rgb(244, 84, 51);font-weight: bold;">Add</span> <span style="font-size: 20px;"> Product</span><br><br><br></div>
+            <div *ngIf="productsubmitted">
+                <div class="alert alert-success" role="alert">
+                    {{productsubmitted}}
+                  </div>
+            </div>
             <form #addproduct="ngForm" (submit)="addProductdata(addproduct.value)">
                 <input type="text" class="form-control" id="pname" name="pname" #pname="ngModel" ngModel placeholder="Enter Product Name" required><br>
                 <input type="text" class="form-control" id="pprice" name="pprice" #pprice="ngModel" ngModel placeholder="Enter Product Price" required><br>
