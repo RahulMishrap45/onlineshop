@@ -2,13 +2,15 @@
     <div class="row">
         <div class="col-md-3">
             <div class="logo">
-                <img src="assets/companylogo.jpg" alt="">
+                <a routerLink="/home"><img src="assets/companylogo.jpg" alt=""></a>
             </div>
         </div>
         <div class="col-md-5" style="margin:auto">
+            <div *ngIf="menuType==='default'">
                 <form class="form-inline">
-                  <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
                 </form>
+            </div>
         </div>
         <div class="col-md-4" style="margin:auto">
             <!-- <div class="menuitem" style="margin:auto">
@@ -19,11 +21,24 @@
                     <li><a href="">Logout</a></li>
                 </ul>
             </div> -->
-            <div class="menu" style="justify-content: center;">
-                <h5 class="item" routerLink="/home">Home</h5>
-                <h5 class="item" routerLink="/seller-auth">Seller</h5>
-                <h5 class="item"> login</h5>
-                <h5 class="item"> Cart(0)</h5>
+            <div [ngSwitch]="menuType">
+                <div *ngSwitchCase="'default'">
+                    <div class="menu" style="justify-content: center;">
+                        <h5 class="item" routerLink="/home">Home</h5>
+                        <h5 class="item" routerLink="/seller-auth">Seller</h5>
+                        <h5 class="item"> login</h5>
+                        <h5 class="item"> Cart(0)</h5>
+                    </div>
+                </div>
+          <div *ngSwitchCase="'seller'">
+                <div class="menu" style="justify-content: center;">
+                    
+                    <h5 class="item" routerLink="/seller-add-product">AddProduct</h5>
+                    <h5 class="item" routerLink="seller-home">Product</h5>
+                    <h5 class="item" (click)="logoutSeller()"> logout</h5>
+                    <h5 class="item">SellerName</h5>
+                </div>
+            </div>
             </div>
         </div>
     </div>

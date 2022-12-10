@@ -1,16 +1,27 @@
 {
   "seller": [
     {
-      "user": "rahulpm",
-      "email": "rmishrarahul545@gmail.com",
-      "password": "Mummypm@45",
+      "user": "prince123",
+      "email": "gevariyaprince123@gmail.com",
+      "password": "123",
       "id": 1
     },
     {
       "user": "prince123",
       "email": "gevariyaprince123@gmail.com",
-      "password": "prince123",
+      "password": "123",
       "id": 2
+    }
+  ],
+  "Products": [
+    {
+      "pname": "Oppo",
+      "pprice": "20000",
+      "pcolor": "blue",
+      "pcategory": "Mobile",
+      "pdescription": "Oppo C33",
+      "pimage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwhexV7pxOOqet5kQhWqEP4OmgPeChKJ20pw&usqp=CAU",
+      "id": 1
     }
   ]
 }
