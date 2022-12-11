@@ -27,13 +27,13 @@
       "id": 2
     },
     {
-      "id": 3,
       "pname": "oneplus Bluetooth",
       "pprice": "1,990",
       "pcolor": "blue",
       "pcategory": "Mobiles",
       "pdescription": "OnePlus Bullets Z2 Bluetooth Wireless Earphones with Mic",
-      "pimage": "https://m.media-amazon.com/images/I/514m1VhSUUL._SX679_.jpg"
+      "pimage": "https://m.media-amazon.com/images/I/514m1VhSUUL._SX679_.jpg",
+      "id": 3
     },
     {
       "id": 4,
@@ -70,6 +70,15 @@
       "pcategory": "Mobiles",
       "pdescription": "vivo v25 Pro 5G Smartphone,12Gb RAM, 256Gb",
       "pimage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCA52tqzIgdvQ_Ho-HTowIFeXSSojhb-f4fA&usqp=CAU"
+    },
+    {
+      "pname": "ChromeBook",
+      "pprice": "28,490",
+      "pcolor": "gray",
+      "pcategory": "Laptop",
+      "pdescription": "Lenovo IdeaPad Flex 3 Chromebook Celeron Dual Core - (4 GB/128 GB EMMC Storage/Chrome OS)",
+      "pimage": "https://rukminim1.flixcart.com/image/312/312/xif0q/computer/u/k/w/-original-imaggqgcggpau2zr.jpeg?q=70",
+      "id": 8
     }
   ]
 }
