@@ -1,1 +1,32 @@
-<p>seller-home works!</p>
+<div class="container py-5">
+    <div class="row">
+        <div class="col">
+            <div class="float-end" *ngIf="deletesuccess">
+                <div class="alert alert-danger" role="alert">{{deletesuccess}}</div></div>
+            <div> <span style="font-size: 40px;color: rgb(244, 84, 51);font-weight: bold;">Pro</span> <span style="font-size: 20px;"> duct List</span><br><br><br></div>   
+            <p-table [value]="productlist">
+                    <ng-template pTemplate="header">
+                        <tr>
+                            <th>Product Image</th>
+                            <th>Product Name</th>
+                            <th>Product Price</th>
+                            <th>Product Color</th>
+                            <th>Product Description</th>
+                            <th>Action</th>
+                        </tr>
+                    </ng-template>
+                    <ng-template pTemplate="body" let-product>
+                        <tr>
+                            <td><img src="{{product.pimage}}" alt=""></td>
+                            <td>{{product.pname}}</td>
+                            <td>{{product.pprice}}</td>
+                            <td>{{product.pcolor}}</td>
+                            <td>{{product.pdescription}}</td>
+                            <th><span style="color:red"><i (click)="deleteitem(product.id)" class="fa-solid fa-trash"></i></span>
+                                &nbsp;&nbsp;&nbsp;<span style="color:rgb(74, 133, 221)"><a href="/seller-update-product/{{product.id}}"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a></span></th>
+                        </tr>
+                    </ng-template>
+                </p-table> 
+        </div>
+    </div>
+</div>

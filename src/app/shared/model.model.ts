@@ -8,10 +8,11 @@ export class sellerlogIn{
     password:string;
 }
 export class product{
+    id:number;
     pname:string;
     pprice:number;
     pcolor:string;
     pcategory:string;
     pdescription:string;
-    pImage:string;
+    pimage:string;
 }

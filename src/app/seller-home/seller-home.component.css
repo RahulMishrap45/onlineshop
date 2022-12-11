@@ -1,0 +1,14 @@
+p-table th{
+    border: 1px solid black;
+    text-align: center;
+    padding: 10px;
+}
+p-table td{
+    border: 1px solid black;
+    text-align: center;
+    padding: 5px;
+}
+img{
+    width: 50%;
+    height: 50%;
+}

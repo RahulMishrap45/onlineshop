@@ -9,13 +9,67 @@
   ],
   "Products": [
     {
-      "pname": "Oppo",
-      "pprice": "20000",
-      "pcolor": "blue",
-      "pcategory": "Mobile",
-      "pdescription": "Oppo C33",
-      "pimage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwhexV7pxOOqet5kQhWqEP4OmgPeChKJ20pw&usqp=CAU",
+      "pname": "One Plus",
+      "pprice": "19,948",
+      "pcolor": "Blue Tide",
+      "pcategory": "Mobiles",
+      "pdescription": "OnePlus Nord CE 2 Lite 5G",
+      "pimage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzCEYj_PFGPPzDjnVfJLJQCsg5KF4AKW_UUg&usqp=CAU",
       "id": 1
+    },
+    {
+      "pname": "Charger",
+      "pprice": "499",
+      "pcolor": "white",
+      "pcategory": "Electronics",
+      "pdescription": "Ultra Fast Type-C Charger",
+      "pimage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2tMcm9SqFPa85v8pk2nMcVYxMK90aa20Ofw&usqp=CAU",
+      "id": 2
+    },
+    {
+      "id": 3,
+      "pname": "oneplus Bluetooth",
+      "pprice": "1,990",
+      "pcolor": "blue",
+      "pcategory": "Mobiles",
+      "pdescription": "OnePlus Bullets Z2 Bluetooth Wireless Earphones with Mic",
+      "pimage": "https://m.media-amazon.com/images/I/514m1VhSUUL._SX679_.jpg"
+    },
+    {
+      "id": 4,
+      "pname": "Speaker",
+      "pprice": "990",
+      "pcolor": "black",
+      "pcategory": "Electronics",
+      "pdescription": "The best portable Bluetooth speaker",
+      "pimage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQiSfuznfdntB2WH8z2MyNikk57gIooV-tpwA&usqp=CAU"
+    },
+    {
+      "id": 5,
+      "pname": "Memory",
+      "pprice": "4990",
+      "pcolor": "red",
+      "pcategory": "Electronics",
+      "pdescription": "SanDisk 128GB Extreme microSDXC UHS-I Memory Card",
+      "pimage": "https://m.media-amazon.com/images/I/41OrK+UsDyL._SY300_SX300_.jpg"
+    },
+    {
+      "id": 6,
+      "pname": "realme",
+      "pprice": "11,990",
+      "pcolor": "Glowing green",
+      "pcategory": "Mobiles",
+      "pdescription": "realme C35, 4Gb RAM, 64Gb ROM",
+      "pimage": "https://d2xamzlzrdbdbn.cloudfront.net/products/1b657c82-4ed4-4033-b30d-d7633b5869af22280822_416x416.jpg"
+    },
+    {
+      "id": 7,
+      "pname": "vivo V25",
+      "pprice": "31,990",
+      "pcolor": "sailing blue",
+      "pcategory": "Mobiles",
+      "pdescription": "vivo v25 Pro 5G Smartphone,12Gb RAM, 256Gb",
+      "pimage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCA52tqzIgdvQ_Ho-HTowIFeXSSojhb-f4fA&usqp=CAU"
     }
   ]
 }

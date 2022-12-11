@@ -1,0 +1,18 @@
+<div class="container py-3">
+    <div class="row justify-content-center">
+        <div class="col-md-4">
+            <div class="text-center"> <span style="font-size: 40px;color: rgb(244, 84, 51);font-weight: bold;">Up</span>date <span style="font-size: 20px;"> Product</span><br><br><br></div>
+            <div class="float-end" *ngIf="updated">
+                <div class="alert alert-success" role="alert">{{updated}}</div></div>
+            <form #addproduct="ngForm" (submit)="addProductdata(addproduct.value)">
+                <input type="text" class="form-control" id="pname" name="pname" #pname="ngModel" ngModel="{{productdata?.pname}}" placeholder="update Product Name" required><br>
+                <input type="text" class="form-control" id="pprice" name="pprice" #pprice="ngModel" ngModel="{{productdata?.pprice}}" placeholder="update Product Price" required><br>
+                <input type="text" class="form-control" id="pcolor" name="pcolor" #pcolor="ngModel" ngModel="{{productdata?.pcolor}}" placeholder="update Product Color" required><br>
+                <input type="text" class="form-control" id="pcategory" name="pcategory" #pcategory="ngModel" ngModel="{{productdata?.pcategory}}" placeholder="update Product Category" required><br>
+                <textarea type="text" rows="3" cols="50" class="form-control" id="pdescription" name="pdescription" #pdescription="ngModel" ngModel="{{productdata?.pdescription}}" placeholder="update Product description" required></textarea><br>
+                <input type="text" class="form-control" id="usename" name="pimage" #pimage="ngModel" ngModel="{{productdata?.pimage}}" placeholder="update Product Image Url" required><br>
+                <button type="submit" class="btn btn-primary" [disabled]="">Update</button>
+            </form>
+        </div>
+    </div>
+</div>
