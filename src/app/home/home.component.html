@@ -11,6 +11,25 @@
 		</ng-template>
 	</ngb-carousel>
 	<div class="row py-5">
+		<div class="col-md-3 col-sm-6 mb-4"  *ngFor="let item of productlist">
+			<div class="card">
+				<img class="card-img-top" src="{{item.pimage}}" alt="Card image cap">
+				<div class="card-body d-flex flex-column">
+					<h5 class="card-title">{{item.pname}}</h5>
+					<h6 class="card-subtitle mb-2 text-muted"><i style="color:red" class="fa fa-inr"
+							aria-hidden="true"></i> {{item.pprice}}</h6>
+					<p class="card-text">{{item.pdescription}}</p>
+					<div class="link" style="margin-top: auto;">
+						<span class="float-start"><button type="button" class="btn btn-info"><a href="#"
+									class="card-link">View Product</a></button></span>
+						<span class="float-end"><button type="button" class="custom form-control"><a href="#"
+									class="card-link">Add Cart</a></button></span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- <div class="row py-5">
 		<div class="col-md-3">
 			<div class="card">
 				<img class="card-img-top" src="../assets/12.jfif" alt="Card image cap">
@@ -18,8 +37,10 @@
 				  <h5 class="card-title">Card title</h5>
 				  <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
 				  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-				  <a href="#" class="card-link">Card link</a>
-				  <a href="#" class="card-link">Another link</a>
+				  <div class="link">
+					<span class="float-start"><button type="button" class="btn btn-info"><a href="#" class="card-link">View Product</a></button></span>
+					<span class="float-end"><button type="button" class="custom form-control"><a href="#" class="card-link">Add Cart</a></button></span>
+				</div>
 				</div>
 			  </div>
 		</div>
@@ -31,8 +52,10 @@
 				  <h5 class="card-title">Card title</h5>
 				  <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
 				  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-				  <a href="#" class="card-link">Card link</a>
-				  <a href="#" class="card-link">Another link</a>
+				  <div class="link">
+					<span class="float-start"><button type="button" class="btn btn-info"><a href="#" class="card-link">View Product</a></button></span>
+					<span class="float-end"><button type="button" class="custom form-control"><a href="#" class="card-link">Add Cart</a></button></span>
+				</div>
 				</div>
 			  </div>
 		</div>
@@ -44,8 +67,10 @@
 				  <h5 class="card-title">Card title</h5>
 				  <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
 				  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-				  <a href="#" class="card-link">Card link</a>
-				  <a href="#" class="card-link">Another link</a>
+				  <div class="link">
+					<span class="float-start"><button type="button" class="btn btn-info"><a href="#" class="card-link">View Product</a></button></span>
+					<span class="float-end"><button type="button" class="custom form-control"><a href="#" class="card-link">Add Cart</a></button></span>
+					</div>
 				</div>
 			  </div>
 		</div>
@@ -57,10 +82,12 @@
 				  <h5 class="card-title">Card title</h5>
 				  <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
 				  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-				  <a href="#" class="card-link">Card link</a>
-				  <a href="#" class="card-link">Another link</a>
+				  <div class="link">
+					<span class="float-start"><button type="button" class="btn btn-info"><a href="#" class="card-link">View Product</a></button></span>
+					<span class="float-end"><button type="button" class="custom form-control"><a href="#" class="card-link">Add Cart</a></button></span>
+				</div>
 				</div>
 			  </div>
 		</div>
 	</div>
-</div>
+</div> -->

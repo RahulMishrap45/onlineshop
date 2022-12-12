@@ -20,3 +20,16 @@ img{
     width:100%;
     height:200px;
 }
+a{
+    text-decoration: none;
+    color:white;
+}
+.custom{
+    background-color: rgb(230, 66, 40);
+}
+.custom:hover{
+    background-color: rgb(230, 99, 40);
+}
+.card{
+    height: 100%;
+}

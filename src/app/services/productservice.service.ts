@@ -32,6 +32,6 @@ export class ProductserviceService {
   }
 
   getProductlimit():Observable<product[]>{
-    return this.http.get<product[]>('http://localhost:3000/Products?_limit=8');
+    return this.http.get<product[]>('http://localhost:3000/Products?_limit=9');
   }
 }
