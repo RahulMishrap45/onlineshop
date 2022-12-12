@@ -7,14 +7,15 @@ import { product } from '../shared/model.model';
   providedIn: 'root'
 })
 export class ProductserviceService {
-  productlist: product[];
-
+  productlist: product[]=[];
+  productdata:product = new product();
   constructor(private http:HttpClient) { }
 
   addProduct(data:product){
     return this.http.post('http://localhost:3000/Products',data);
   }
   getProduct():Observable<product[]>{
+    console.log(this.productlist);
     return this.http.get<product[]>('http://localhost:3000/Products');
   }
 
@@ -28,5 +29,9 @@ export class ProductserviceService {
 
   addProductdata(data:product){
     return this.http.put(`http://localhost:3000/Products/${data.id}`,data);
+  }
+
+  getProductlimit():Observable<product[]>{
+    return this.http.get<product[]>('http://localhost:3000/Products?_limit=8');
   }
 }

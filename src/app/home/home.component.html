@@ -1,1 +1,66 @@
-<p>Home works!</p>
+<div class="container">
+	<ngb-carousel *ngIf="productlist" class="py-5 bg">
+		<ng-template *ngFor="let item of productlist" ngbSlide>
+			<div class="picsum-img-wrapper">
+				<img src="{{item.pimage}}" alt="Random first slide" />
+			</div>
+			<div class="carousel-caption">
+				<h3>{{item.pname}}</h3>
+				<p>{{item.pdescription}}</p>
+			</div>
+		</ng-template>
+	</ngb-carousel>
+	<div class="row py-5">
+		<div class="col-md-3">
+			<div class="card">
+				<img class="card-img-top" src="../assets/12.jfif" alt="Card image cap">
+				<div class="card-body">
+				  <h5 class="card-title">Card title</h5>
+				  <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+				  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+				  <a href="#" class="card-link">Card link</a>
+				  <a href="#" class="card-link">Another link</a>
+				</div>
+			  </div>
+		</div>
+
+		<div class="col-md-3">
+			<div class="card">
+				<img class="card-img-top" src="../assets/1.jfif" alt="Card image cap">
+				<div class="card-body">
+				  <h5 class="card-title">Card title</h5>
+				  <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+				  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+				  <a href="#" class="card-link">Card link</a>
+				  <a href="#" class="card-link">Another link</a>
+				</div>
+			  </div>
+		</div>
+
+		<div class="col-md-3">
+			<div class="card">
+				<img class="card-img-top" src="../assets/123.jfif" alt="Card image cap">
+				<div class="card-body">
+				  <h5 class="card-title">Card title</h5>
+				  <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+				  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+				  <a href="#" class="card-link">Card link</a>
+				  <a href="#" class="card-link">Another link</a>
+				</div>
+			  </div>
+		</div>
+
+		<div class="col-md-3">
+			<div class="card">
+				<img class="card-img-top" src="../assets/1234.jfif" alt="Card image cap">
+				<div class="card-body">
+				  <h5 class="card-title">Card title</h5>
+				  <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+				  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+				  <a href="#" class="card-link">Card link</a>
+				  <a href="#" class="card-link">Another link</a>
+				</div>
+			  </div>
+		</div>
+	</div>
+</div>

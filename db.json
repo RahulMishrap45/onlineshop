@@ -9,12 +9,12 @@
   ],
   "Products": [
     {
-      "pname": "One Plus",
-      "pprice": "19,948",
+      "pname": "Xiaomi",
+      "pprice": "37,999",
       "pcolor": "Blue Tide",
       "pcategory": "Mobiles",
-      "pdescription": "OnePlus Nord CE 2 Lite 5G",
-      "pimage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzCEYj_PFGPPzDjnVfJLJQCsg5KF4AKW_UUg&usqp=CAU",
+      "pdescription": "Xiaomi 11T Pro 5G Hyperphone (Celestial Magic, 8GB RAM, 256GB Storage)",
+      "pimage": "https://m.media-amazon.com/images/I/71Od5yJbohL._SX679_.jpg",
       "id": 1
     },
     {
@@ -23,7 +23,7 @@
       "pcolor": "white",
       "pcategory": "Electronics",
       "pdescription": "Ultra Fast Type-C Charger",
-      "pimage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2tMcm9SqFPa85v8pk2nMcVYxMK90aa20Ofw&usqp=CAU",
+      "pimage": "https://m.media-amazon.com/images/I/512jfRd1ogL._SX522_.jpg",
       "id": 2
     },
     {
@@ -51,7 +51,7 @@
       "pcolor": "red",
       "pcategory": "Electronics",
       "pdescription": "SanDisk 128GB Extreme microSDXC UHS-I Memory Card",
-      "pimage": "https://m.media-amazon.com/images/I/41OrK+UsDyL._SY300_SX300_.jpg"
+      "pimage": "https://m.media-amazon.com/images/I/513cSw54SwL._SX522_.jpg"
     },
     {
       "id": 6,
