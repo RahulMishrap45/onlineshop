@@ -34,4 +34,8 @@ export class ProductserviceService {
   getProductlimit():Observable<product[]>{
     return this.http.get<product[]>('http://localhost:3000/Products?_limit=9');
   }
+  
+  getProductSerch(event:string,limit:number){
+    return this.http.get<product[]>(`http://localhost:3000/Products?q=${event}`);
+  }
 }

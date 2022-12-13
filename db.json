@@ -47,7 +47,7 @@
     {
       "id": 5,
       "pname": "Memory",
-      "pprice": "4990",
+      "pprice": "4,990",
       "pcolor": "red",
       "pcategory": "Electronics",
       "pdescription": "SanDisk 128GB Extreme microSDXC UHS-I Memory Card",
@@ -82,7 +82,7 @@
     },
     {
       "pname": "DIZO Watch 2",
-      "pprice": "2299",
+      "pprice": "2,299",
       "pcolor": "Grey Strap",
       "pcategory": "watch",
       "pdescription": "DIZO Watch 2 (by realme TechLife)  (Grey Strap, Free Size)",
