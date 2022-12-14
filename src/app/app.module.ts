@@ -14,6 +14,7 @@ import {TableModule} from 'primeng/table';
 import { SellerUpdateProductComponent } from './seller-update-product/seller-update-product.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { SerchComponent } from './serch/serch.component';
+import { ProductDetailsComponent } from './product-details/product-details.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { SerchComponent } from './serch/serch.component';
     SellerHomeComponent,
     SellerAddProductComponent,
     SellerUpdateProductComponent,
-    SerchComponent
+    SerchComponent,
+    ProductDetailsComponent
   ],
   imports: [
     BrowserModule,

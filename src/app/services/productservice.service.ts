@@ -35,7 +35,7 @@ export class ProductserviceService {
     return this.http.get<product[]>('http://localhost:3000/Products?_limit=9');
   }
   
-  getProductSerch(event:string,limit:number){
+  getProductSerch(event:string){
     return this.http.get<product[]>(`http://localhost:3000/Products?q=${event}`);
   }
 }

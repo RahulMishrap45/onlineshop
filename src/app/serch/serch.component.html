@@ -1,1 +1,37 @@
-<p>serch works!</p>
+<div class="container">
+    <div class="foundProduct" *ngIf="!noItem">
+        <div class="row py-5" *ngFor="let item of afterSerchProduct">
+            <div class="col-md-3 col-sm-6 mb-4">
+                <div class="card" routerLink="/product-details/{{item.id}}">
+                    <img class="card-img-top" src="{{item.pimage}}" alt="Card image cap">
+                </div>
+            </div>
+            <div class="col-md-5 col-sm-6 mb-4">
+                <h5 class="card-title py-5">{{item.pname}}</h5>
+                <h6 class="card-subtitle text-muted"><i style="color:red" class="fa fa-inr" aria-hidden="true"></i>
+                    {{item.pprice}}</h6><br>
+                <p class="card-text">{{item.pdescription}}</p>
+                <small id="emailHelp" class="form-text text-muted">1 Year Manufacturer Warrenty for phone and 6 months
+                    Warrenty for In-box.</small>
+                <div class="link py-5" style="margin-top: auto;">
+                    <span class="float-start"><button type="button" class="btn btn-info"><a class="card-link" routerLink="/product-details/{{item.id}}">View
+                                Product</a></button></span>
+                    <span class="float-end"><button type="button" class="custom form-control"><a class="card-link">Add
+                                Cart</a></button></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="notfoundItem" *ngIf="noItem">
+        <div class="row justify-content-center py-5">
+            <div class="col-md-4 text-center py-5">
+                <img class="animate__heartBeat" src="../assets/12345.jpg"  alt="">
+            </div>
+            <div class="row row justify-content-center">
+                <div class="col-md-4 text-center py-5">
+                    <span style="font-size: 25px;font-weight: bold;color:rgb(255, 40, 12)">Product will be uploaded soon........!</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

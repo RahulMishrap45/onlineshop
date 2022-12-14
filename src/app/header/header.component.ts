@@ -34,7 +34,7 @@ export class HeaderComponent implements OnInit {
     if (event){
       const query = event.target as HTMLInputElement;
       console.log(query.value);
-      this.productservice.getProductSerch(query.value,4).subscribe(data => {
+      this.productservice.getProductSerch(query.value).subscribe(data => {
         console.log(this.productserch=data);
         if(data.length>5){
           data.length=5;
@@ -48,6 +48,10 @@ export class HeaderComponent implements OnInit {
   }
 
   serchdata(data:string){
-    console.log(data);
+    this.route.navigate([`serch/${data}`]);
+  }
+
+  suggestionSerch(item: number){
+    this.route.navigate(['/product-details/'+item]);
   }
 }

@@ -1,0 +1,26 @@
+<div class="container py-5">
+    <div class="productlist" *ngIf="productdata">
+        <div class="row py-5">
+            <div class="col-md-3">
+                <img src="{{productdata.pimage}}" alt="">            
+            </div>
+            <div class="col-md-5 col-sm-6 mb-4">
+                <h3 class="card-title">{{productdata.pname}}</h3><br>
+                <h6 class="card-subtitle text-muted"><i style="color:red" class="fa fa-inr" aria-hidden="true"></i> {{productdata.pprice}}</h6><br>
+                <h6 class="card-subtitle text-muted">Color:Gray</h6><br>
+                <h5 class="card-title">Category:<span style="font-size:15px;color: gray;"> {{productdata.pcategory}}</span></h5><br>
+                <h5 class="card-title">Product Description:</h5><span style="font-size:15px;color: gray;"> {{productdata.pdescription}}</span><br><br>
+                <small id="emailHelp" class="form-text text-muted">1 Year Manufacturer Warrenty for phone and 6 months Warrenty for In-box.</small><br><br>
+                <form class="form-inline">
+                    <button class="btn btn-outline-danger" data-mdb-ripple-color="dark" (click)="subproduct('-')">-</button>
+                    <input type="text" class="form-control" style="display:inline-flex;background-color: rgb(235, 231, 231);width:100px;text-align: center;font-weight: bold;" value="{{defaultQuantity}}">
+                <button class="btn btn-outline-success" data-mdb-ripple-color="dark" (click)="addproduct('+')">+</button><br><br>
+               </form>
+                <div class="link">
+                    <span class="float-start"><button type="button" class="btn btn-info"><a class="card-link">Buy Now</a></button></span>
+                    <span class="float-end"><button type="button" class="custom form-control"><a class="card-link">AddCart</a></button></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

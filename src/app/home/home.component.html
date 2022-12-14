@@ -1,7 +1,7 @@
 <div class="container">
 	<ngb-carousel *ngIf="productlist" class="py-5 bg">
 		<ng-template *ngFor="let item of productlist" ngbSlide>
-			<div class="picsum-img-wrapper">
+			<div class="picsum-img-wrapper" routerLink="/product-details/{{item.id}}">
 				<img src="{{item.pimage}}" alt="Random first slide" />
 			</div>
 			<div class="carousel-caption">
@@ -20,9 +20,9 @@
 							aria-hidden="true"></i> {{item.pprice}}</h6>
 					<p class="card-text">{{item.pdescription}}</p>
 					<div class="link" style="margin-top: auto;">
-						<span class="float-start"><button type="button" class="btn btn-info"><a href="#"
-									class="card-link">View Product</a></button></span>
-						<span class="float-end"><button type="button" class="custom form-control"><a href="#"
+						<span class="float-start"><button type="button" class="btn btn-info"><a
+									class="card-link" routerLink="/product-details/{{item.id}}">View Product</a></button></span>
+						<span class="float-end"><button type="button" class="custom form-control"><a
 									class="card-link">Add Cart</a></button></span>
 					</div>
 				</div>
