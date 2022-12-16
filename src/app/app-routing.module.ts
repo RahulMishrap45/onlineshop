@@ -8,6 +8,7 @@ import { SellerHomeComponent } from './seller-home/seller-home.component';
 import { SellerUpdateProductComponent } from './seller-update-product/seller-update-product.component';
 import { SerchComponent } from './serch/serch.component';
 import { AuthSellerGuard } from './shared/auth-seller.guard';
+import { UserAuthComponent } from './user-auth/user-auth.component';
 
 const routes: Routes = [
   {path:'' ,component:HomeComponent},
@@ -17,7 +18,8 @@ const routes: Routes = [
   {path:'seller-add-product',component:SellerAddProductComponent,canActivate:[AuthSellerGuard]},
   {path:'seller-update-product/:id',component:SellerUpdateProductComponent,canActivate:[AuthSellerGuard]},
   {path:'serch/:query',component:SerchComponent},
-  {path:'product-details/:productid',component:ProductDetailsComponent}
+  {path:'product-details/:productid',component:ProductDetailsComponent},
+  {path:'user-auth', component:UserAuthComponent}
   // {path:'**',redirectTo:'home',pathMatch:'full'}
 ];
 

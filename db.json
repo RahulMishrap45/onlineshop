@@ -89,5 +89,19 @@
       "pimage": "https://rukminim1.flixcart.com/image/312/312/kt39jm80/smartwatch/d/h/j/android-ios-dw2118-dizo-no-original-imag6gh7vr7fhtfc.jpeg?q=70",
       "id": 9
     }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "email": "rmishrarahul545@gmail.com",
+      "password": 12345,
+      "username": "rahul"
+    },
+    {
+      "user": "prince123",
+      "email": "gevariyaprince123@gmail.com",
+      "password": "1",
+      "id": 2
+    }
   ]
 }

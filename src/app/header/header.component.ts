@@ -18,6 +18,9 @@ export class HeaderComponent implements OnInit {
       if (data.url) {
         if (localStorage.getItem('seller') && data.url.includes('seller')) {
           this.menuType = 'seller'
+        }else if(localStorage.getItem('users'))
+        {
+          this.menuType='users'
         } else {
           this.menuType = 'default'
         }
@@ -28,6 +31,11 @@ export class HeaderComponent implements OnInit {
   logoutSeller() {
     localStorage.removeItem('seller');
     this.route.navigate(['/']);
+  }
+
+  logout(){
+    localStorage.removeItem('users');
+    this.route.navigate(['/user-auth'])
   }
 
   getProductSerch(event: KeyboardEvent) {

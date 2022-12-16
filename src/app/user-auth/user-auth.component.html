@@ -1,0 +1,85 @@
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-4 col-md-4">
+            <form *ngIf= "showlogIn" #UserSignUp="ngForm" (ngSubmit)="UsersignupPage(UserSignUp.value)">
+                <div class="form-group">
+                    <div class="text-center"> <span style="font-size: 40px;color: rgb(244, 84, 51);font-weight: bold;">Use</span>er Signup<br><br><br></div>
+                    <label for="exampleInputEmail1" class="float-start">User Name</label>
+
+                    <!-- Start Validation Process -->
+                    <!-- <div *ngIf="user.invalid && (user.touched || user.dirty)">
+                        <p class="float-end text-danger">Required Field</p>
+                    </div> -->
+                    <!-- End Validation Process -->
+
+                    <input type="text" class="form-control" id="username" name="user" #user="ngModel" ngModel placeholder="Enter User" required><br>
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputEmail1" class="float-start">Email address</label>
+
+                    <!-- Start Validation Process -->
+                    <div *ngIf="email.invalid && (email.touched || email.dirty)">
+                        <p class="float-end text-danger">Required Field</p>
+                    </div>
+                    <!-- End Validation Process -->
+
+                    <input type="email" class="form-control" name="email" #email="ngModel" ngModel id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" required>
+                    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                </div>
+                <div class="form-group">
+
+                    <label for="exampleInputPassword1" class="float-start">Password</label>
+                    <!-- Start Validation Process -->
+                    <div *ngIf="password.invalid && (password.touched || password.dirty)">
+                        <p class="float-end text-danger">Required Field</p>
+                    </div>
+                    <!-- End Validation Process -->
+
+                    <input type="password" class="form-control" name="password" #password="ngModel" ngModel id="exampleInputPassword1" placeholder="Password" required>
+                </div>
+                <div class="form-group form-check">
+                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                </div><br>  
+                <button type="submit" class="btn btn-primary" [disabled]="UserSignUp.invalid">Submit</button><br>
+                <div style="text-align: center;" >Already Have account??<a (click)="Userlogin()"> <span style="color: rgb(244, 84, 51);font-weight: bold;cursor: pointer;"> Click here</span></a></div>
+            </form>
+
+
+            <!-- LogIn Page Start Here -->
+            
+            <form *ngIf= "!showlogIn" #Userlogin="ngForm" (ngSubmit)="UserloginPage(Userlogin.value)">
+                <div class="form-group">
+                    
+                    <div class="text-center"> <span style="font-size: 40px;color: rgb(244, 84, 51);font-weight: bold;">Use</span>r Login<br><br><br></div>
+                    <p class="text-center text-danger"></p><br>
+                    <label for="exampleInputEmail1" class="float-start">Email address</label>
+
+                    <!-- Start Validation Process -->
+                    <div *ngIf="email.invalid && (email.touched || email.dirty)">
+                        <p class="float-end text-danger">Required Field</p>
+                    </div>
+                    <!-- End Validation Process -->
+
+                    <input type="email" class="form-control" name="email" #email="ngModel" ngModel id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" required>
+                    <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+                </div>
+                <div class="form-group">
+
+                    <label for="exampleInputPassword1" class="float-start">Password</label>
+                    <!-- Start Validation Process -->
+                    <div *ngIf="password.invalid && (password.touched || password.dirty)">
+                        <p class="float-end text-danger">Required Field</p>
+                    </div>
+                    <!-- End Validation Process -->
+
+                    <input type="password" class="form-control" name="password" #password="ngModel" ngModel id="exampleInputPassword1" placeholder="Password" required>
+                </div><br>  
+                <button type="submit" class="btn btn-primary" [disabled]="Userlogin.invalid">Submit</button>
+                <div style="text-align: center;" >Don't have account?? <a (click)="UserSignUp()"> <span style="color: rgb(244, 84, 51);font-weight: bold;cursor: pointer;"> Click here</span></a></div>
+            </form>
+            
+            <!-- LogIn Page Here -->
+        </div>
+    </div>
+</div>
