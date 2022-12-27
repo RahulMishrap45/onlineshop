@@ -8,26 +8,31 @@ import { Model, sellerlogIn } from '../shared/model.model';
 })
 export class UserService {
 
+private url ="http://localhost:8080/onlineshop/userRegister"
+
   constructor(private http:HttpClient,private route:Router) { }
 
-  userPostMessage(data:any){
-    return this.http.post("http://localhost:3000/users",data,{observe: 'response'})
-    .subscribe(result =>{
+  // userPostMessage(data:any){
+  //   return this.http.post("http://localhost:3000/users",data,{observe: 'response'})
+  //   .subscribe(result =>{
+  //     if(result){
+  //       console.log(result.body);
+  //       localStorage.setItem('users',JSON.stringify(result));
+  //       this.route.navigate(['/home']);
+  //     }
+  //   });
+  // }
+  userRegister(data:Model){
+    return this.http.post(this.url,data).subscribe(result=>{
       if(result){
-        console.log(result.body);
-        localStorage.setItem('users',JSON.stringify(result));
+        console.log(result);
         this.route.navigate(['/home']);
       }
-    });
+    })
+
   }
 
-  usergetMessage(data:sellerlogIn){
-    this.http.get(`http://localhost:3000/seller?email=${data.email}&password=${data.password}`,{observe:'response'})
-    .subscribe((result:any)=>{
-      if(result){
-        localStorage.setItem('users',JSON.stringify(result.body[0]));
-        this.route.navigate(['/home']);
-      } 
-    });
+  userlogin(data:Model){
+    return this.http.post("http://localhost:8080/onlineshop/getEmailPassword",data)
   }
 }

@@ -15,4 +15,5 @@ export class product{
     pcategory:string;
     pdescription:string;
     pimage:string;
+    image:File[];
 }

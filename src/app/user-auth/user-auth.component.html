@@ -1,6 +1,11 @@
 <div class="container py-5">
     <div class="row justify-content-center">
         <div class="col-lg-4 col-md-4">
+            <div *ngIf= "Invalid">
+                <div class="alert alert-danger" role="alert">
+                    {{Invalid}}
+                  </div>
+            </div>
             <form *ngIf= "showlogIn" #UserSignUp="ngForm" (ngSubmit)="UsersignupPage(UserSignUp.value)">
                 <div class="form-group">
                     <div class="text-center"> <span style="font-size: 40px;color: rgb(244, 84, 51);font-weight: bold;">Use</span>er Signup<br><br><br></div>

@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Model, sellerlogIn } from '../shared/model.model';
 import { SellerService } from '../services/seller.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-seller-auth',
@@ -10,32 +11,43 @@ import { SellerService } from '../services/seller.service';
 export class SellerAuthComponent {
 showlogIn=true;
 showloginError = '';
-  constructor(private sellerauth:SellerService){}
+Invalid:string|undefined;
+  constructor(private sellerauth:SellerService,private route:Router){}
 
-  ngOnInit():void{
-    this.sellerauth.reloadSellerAuth();
-  }
+  // ngOnInit():void{
+  //   this.sellerauth.reloadSellerAuth();
+  // }
 
-  signup(data:Model){
-    this.sellerauth.PostMessage(data);
-  }
+  // signup(data:Model){
+  //   this.sellerauth.PostMessage(data);
+  // }
 
-  login(data:sellerlogIn){
+  login(data:Model){
     this.showloginError='';
-    this.sellerauth.getLogIn(data);
-    this.sellerauth.logInerror.subscribe((error:boolean) => {
-      if(error){
-        this.showloginError="Invalid Crediential";
+    this.sellerauth.adminlogIn(data).subscribe(result =>{
+      if(result){
+        this.route.navigate(['seller-home']);
+      }else{
+        this.Invalid="Invalid Credential!!";
+      setTimeout(()=>{
+        this.Invalid=undefined
+      },2000);
       }
-    })
+    });
+
+    // this.sellerauth.logInerror.subscribe((error:boolean) => {
+    //   if(error){
+    //     this.showloginError="Invalid Crediential";
+    //   }
+    // })
   }
 
   sellerlogin(){
-    this.showlogIn=false;
+    this.showlogIn=true;
   }
 
   sellerSignUp(){
-    this.showlogIn=true;
+    this.showlogIn=false;
   }
 
 }

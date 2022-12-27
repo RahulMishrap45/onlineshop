@@ -1,28 +1,34 @@
 <div class="container py-5">
     <div class="row justify-content-center">
         <div class="col-lg-4 col-md-4">
-            <form *ngIf= "showlogIn" #SellerSignUp="ngForm" (ngSubmit)="signup(SellerSignUp.value)">
-                <div class="form-group">
-                    <div class="text-center"> <span style="font-size: 40px;color: rgb(244, 84, 51);font-weight: bold;">Sel</span>ler Signup<br><br><br></div>
-                    <label for="exampleInputEmail1" class="float-start">User Name</label>
+            <!-- <div *ngIf= "Invalid">
+                <div class="alert alert-danger" role="alert">
+                    {{Invalid}}
+                  </div>
+            </div>
+            <form *ngIf= "showlogIn" #SellerSignUp="ngForm">
+                <!-- (ngSubmit)="signup(SellerSignUp.value)" -->
+                <!-- <div class="form-group">
+                    <div class="text-center"> <span style="font-size: 40px;color: rgb(244, 84, 51);font-weight: bold;">Ad</span>min Signup<br><br><br></div>
+                    <label for="exampleInputEmail1" class="float-start">User Name</label> -->
 
                     <!-- Start Validation Process -->
                     <!-- <div *ngIf="user.invalid && (user.touched || user.dirty)">
                         <p class="float-end text-danger">Required Field</p>
                     </div> -->
                     <!-- End Validation Process -->
-
+<!-- 
                     <input type="text" class="form-control" id="usename" name="user" #user="ngModel" ngModel placeholder="Enter User" required><br>
                 </div>
                 <div class="form-group">
                     <label for="exampleInputEmail1" class="float-start">Email address</label>
 
                     <!-- Start Validation Process -->
-                    <div *ngIf="email.invalid && (email.touched || email.dirty)">
+                    <!-- <div *ngIf="email.invalid && (email.touched || email.dirty)">
                         <p class="float-end text-danger">Required Field</p>
-                    </div>
+                    </div> -->
                     <!-- End Validation Process -->
-
+<!-- 
                     <input type="email" class="form-control" name="email" #email="ngModel" ngModel id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" required>
                     <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
                 </div>
@@ -30,12 +36,12 @@
 
                     <label for="exampleInputPassword1" class="float-start">Password</label>
                     <!-- Start Validation Process -->
-                    <div *ngIf="password.invalid && (password.touched || password.dirty)">
+                    <!-- <div *ngIf="password.invalid && (password.touched || password.dirty)">
                         <p class="float-end text-danger">Required Field</p>
-                    </div>
+                    </div> -->
                     <!-- End Validation Process -->
 
-                    <input type="password" class="form-control" name="password" #password="ngModel" ngModel id="exampleInputPassword1" placeholder="Password" required>
+                    <!-- <input type="password" class="form-control" name="password" #password="ngModel" ngModel id="exampleInputPassword1" placeholder="Password" required>
                 </div>
                 <div class="form-group form-check">
                     <input type="checkbox" class="form-check-input" id="exampleCheck1">
@@ -43,15 +49,19 @@
                 </div><br>  
                 <button type="submit" class="btn btn-primary" [disabled]="SellerSignUp.invalid">Submit</button><br>
                 <div style="text-align: center;" >Already Have account??<a (click)="sellerlogin()"> <span style="color: rgb(244, 84, 51);font-weight: bold;"> Click here</span></a></div>
-            </form>
+            </form>  -->
 
 
             <!-- LogIn Page Start Here -->
-            
-            <form *ngIf= "!showlogIn" #Sellerlogin="ngForm" (ngSubmit)="login(Sellerlogin.value)">
+            <div *ngIf= "Invalid">
+                <div class="alert alert-danger" role="alert">
+                    {{Invalid}}
+                  </div>
+            </div>
+            <form *ngIf= "showlogIn" #Sellerlogin="ngForm" (ngSubmit)="login(Sellerlogin.value)">
                 <div class="form-group">
                     
-                    <div class="text-center"> <span style="font-size: 40px;color: rgb(244, 84, 51);font-weight: bold;">Sel</span>ler Login<br><br><br></div>
+                    <div class="text-center"> <span style="font-size: 40px;color: rgb(244, 84, 51);font-weight: bold;">Ad</span>min Login<br><br><br></div>
                     <p class="text-center text-danger">{{showloginError}}</p><br>
                     <label for="exampleInputEmail1" class="float-start">Email address</label>
 

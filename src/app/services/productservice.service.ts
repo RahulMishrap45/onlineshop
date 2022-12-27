@@ -12,19 +12,18 @@ export class ProductserviceService {
   constructor(private http:HttpClient) { }
 
   addProduct(data:product){
-    return this.http.post('http://localhost:3000/Products',data);
+    return this.http.post('http://localhost:8080/onlineshop/addproducts',data);
   }
   getProduct():Observable<product[]>{
-    console.log(this.productlist);
-    return this.http.get<product[]>('http://localhost:3000/Products');
+    return this.http.get<product[]>('http://localhost:8080/onlineshop/getproducts');
   }
 
   deleteproduct(id:number){
-    return this.http.delete(`http://localhost:3000/Products/${id}`);
+    return this.http.delete(`http://localhost:8080/onlineshop/${id}`);
   }
 
   getProductUpdata(id:string){
-    return this.http.get<product>(`http://localhost:3000/Products/${id}`);
+    return this.http.get<product>(`http://localhost:8080/onlineshop/getproduct/${id}`);
   }
 
   addProductdata(data:product){
@@ -32,7 +31,7 @@ export class ProductserviceService {
   }
 
   getProductlimit():Observable<product[]>{
-    return this.http.get<product[]>('http://localhost:3000/Products?_limit=9');
+    return this.http.get<product[]>('http://localhost:8080/onlineshop/getproducts');
   }
   
   getProductSerch(event:string){

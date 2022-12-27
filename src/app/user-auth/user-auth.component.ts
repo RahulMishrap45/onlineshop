@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { observable } from 'rxjs';
 import { UserService } from '../services/user.service';
 import { Model, sellerlogIn } from '../shared/model.model';
@@ -9,24 +10,34 @@ import { Model, sellerlogIn } from '../shared/model.model';
   styleUrls: ['./user-auth.component.css']
 })
 export class UserAuthComponent {
+users: Model[];
 showlogIn=true;
-constructor(private userservice:UserService){}
+Invalid:string | undefined;
+constructor(private userservice:UserService,private route:Router){}
 
 ngOnInit():void{
   
 }
-users: Model[]=[];
+
 UsersignupPage(value:Model){
-  console.log(value);
-  this.userservice.userPostMessage(value)
+  this.userservice.userRegister(value)
 }
 
 Userlogin(){
 this.showlogIn =false;
 }
 
-UserloginPage(value:sellerlogIn){
-  this.userservice.usergetMessage(value);
+UserloginPage(value:Model){
+  this.userservice.userlogin(value).subscribe(result =>{
+    if(result==true){
+      this.route.navigate(['/home'])
+    }else{
+      this.Invalid="Invalid Credential!!";
+      setTimeout(()=>{
+        this.Invalid=undefined
+      },2000);
+    }
+  })
 }
 
 UserSignUp(){
