@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
 import { ProductDetailsComponent } from './product-details/product-details.component';
 import { SellerAddProductComponent } from './seller-add-product/seller-add-product.component';
@@ -19,6 +20,7 @@ const routes: Routes = [
   {path:'seller-update-product/:id',component:SellerUpdateProductComponent,canActivate:[AuthSellerGuard]},
   {path:'serch/:query',component:SerchComponent},
   {path:'product-details/:productid',component:ProductDetailsComponent},
+  {path:'footer', component:FooterComponent},
   {path:'user-auth', component:UserAuthComponent}
   // {path:'**',redirectTo:'home',pathMatch:'full'}
 ];

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { ProductserviceService } from '../services/productservice.service';
 import { product } from '../shared/model.model';
 
@@ -9,28 +10,15 @@ import { product } from '../shared/model.model';
 })
 export class SellerAddProductComponent {
 
-  imagefile = File;
   productsubmitted:string | undefined;
-  constructor(private add:ProductserviceService){}
+  constructor(private add:ProductserviceService,private route:Router){}
 
   addProductdata(data:product){
-    //create form data object
-    // const formdata = new FormData();
-    // formdata.append("userData", this.data.value);
-    // formdata.append("image", this.imagefile);
-
     this.add.addProduct(data).subscribe((result)=>{
       if(result){
         this.productsubmitted="Successfully Added!!"
       }
       setTimeout(()=>(this.productsubmitted=undefined),3000);
     })
-  }
-  
-  fileselected(event:any){
-    if(event.target.files){
-      const file = event.target.files[0];
-      this.imagefile = file;
-    }
   }
 }
