@@ -9,6 +9,7 @@ import { product } from '../shared/model.model';
   styleUrls: ['./product-details.component.css']
 })
 export class ProductDetailsComponent {
+
  productdata: product | undefined;
 
  defaultQuantity =1;
@@ -31,6 +32,14 @@ export class ProductDetailsComponent {
   subproduct(sub : string){
     if(sub==='-' && this.defaultQuantity>1){
       this.defaultQuantity=this.defaultQuantity-1;
+    }
+  }
+
+
+  AddToCart() {
+    if(this.productdata){
+      this.productdata.quantity=this.defaultQuantity;
+      console.log(this.productdata);
     }
   }
 }

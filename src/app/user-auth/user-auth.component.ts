@@ -29,6 +29,7 @@ this.showlogIn =false;
 
 UserloginPage(value:Model){
   this.userservice.userlogin(value).subscribe(result =>{
+    console.log(result)
     if(result==true){
       this.route.navigate(['/home'])
     }else{
